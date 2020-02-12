@@ -1,0 +1,13 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f7f7;
+}
+
+.text-description {
+    max-height: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .8em;
+    color: #666;
+}

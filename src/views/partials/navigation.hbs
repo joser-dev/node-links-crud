@@ -1,0 +1,32 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="/links">
+    <img src="https://openwhisk.apache.org/images/runtimes/logo-nodejs-notext.svg" alt="Node App" width="40" height="40">
+    Links App
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      {{#if user}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            {{user.username}}
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/links">Links</a>
+            <a class="dropdown-item" href="/links/add">Crear link</a>
+            <a class="dropdown-item" href="/profile">Perfil <span class="sr-only">(current)</span></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/logout">Salir</a>
+          </div>
+        </li>
+      {{else}}
+        <a href="/signin" class="nav-link">Login</a>
+        <a href="/signup" class="nav-link">Registro</a>
+      {{/if}}
+    </ul>
+  </div>
+  </div>
+</nav>
